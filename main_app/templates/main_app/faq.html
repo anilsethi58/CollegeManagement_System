@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FAQ Page</title>
+  <style>
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .faq-question {
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .faq-answer {
+      display: none;
+      padding-left: 20px;
+    }
+
+    .faq-answer.show {
+      display: block;
+    }
+  </style>
+  <script>
+    function toggleAnswer(event) {
+      var answer = event.target.nextElementSibling;
+      answer.classList.toggle("show");
+    }
+  </script>
+</head>
+<body>
+  <div class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(event)">Q: How do I create a new account?</div>
+      <div class="faq-answer">A: To create a new account, click on the "Sign Up" button and follow the instructions on the registration page.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(event)">Q: How do I reset my password?</div>
+      <div class="faq-answer">A: To reset your password, go to the login page and click on the "Forgot Password" link. Follow the instructions sent to your email to reset your password.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(event)">Q: Can I change my username?</div>
+      <div class="faq-answer">A: No, the username cannot be changed once it has been set during the registration process. Choose your username carefully.</div>
+    </div>
+    <!-- Add more FAQ items here -->
+  </div>
+</body>
+</html>

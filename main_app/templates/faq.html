@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FAQ Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .faq {
+      margin-bottom: 10px;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+  </style>
+  <script>
+    function toggleFAQ(answerId) {
+      var answer = document.getElementById(answerId);
+      if (answer.style.display === "none") {
+        answer.style.display = "block";
+      } else {
+        answer.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-4 mb-4">FAQ - Student Management System</h1>
+  
+    <div class="faq">
+      <div class="faq-question" onclick="toggleFAQ('faq1')">A. Admin Users Can</div>
+      <div id="faq1" class="faq-answer">
+        <ol>
+          <li>See Overall Summary Charts of Students Performances, Staff Performances, Courses, Subjects, Leave, etc.</li>
+          <li>Manage Staff (Add, Update and Delete)</li>
+          <li>Manage Students (Add, Update and Delete)</li>
+          <li>Manage Course (Add, Update and Delete)</li>
+          <li>Manage Subjects (Add, Update and Delete)</li>
+          <li>Manage Sessions (Add, Update and Delete)</li>
+          <li>View Student Attendance</li>
+          <li>Review and Reply Student/Staff Feedback</li>
+          <li>Review (Approve/Reject) Student/Staff Leave</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question" onclick="toggleFAQ('faq2')">B. Staff/Teachers Can</div>
+      <div id="faq2" class="faq-answer">
+        <ol>
+          <li>See the Overall Summary Charts related to their students, their subjects, leave status, etc.</li>
+          <li>Take/Update Students Attendance</li>
+          <li>Add/Update Result</li>
+          <li>Apply for Leave</li>
+          <li>Send Feedback to HOD</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question" onclick="toggleFAQ('faq3')">C. Students Can</div>
+      <div id="faq3" class="faq-answer">
+        <ol>
+          <li>See the Overall Summary Charts related to their attendance, their subjects, leave status, etc.</li>
+          <li>View Attendance</li>
+          <li>View Result</li>
+          <li>Apply for Leave</li>
+          <li>Send Feedback to HOD</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
